@@ -62,7 +62,6 @@ export default {
           `https://geo.ipify.org/api/v2/country?apiKey=at_9suIeDSYDzY7gtXaQDUid8w7V6PAC&ipAddress=${queryIp.value}`
         );
         const result = data.data;
-        console.log(data);
         ipInfo.value = {
           address: result.ip,
           state: result.location.region,
