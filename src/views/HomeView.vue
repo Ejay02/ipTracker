@@ -68,13 +68,13 @@ export default {
           state: result.location.region,
           timezone: result.location.timezone,
           isp: result.isp,
-          lat: result.location.Lat,
-          lng: result.location.lng,
+          lat: result.location.latlng,
+          lng: result.location.latlng,
         };
-        // leaflet.marker([ipInfo.value.lat, ipInfo.value.lng]).addTo(map);
-        // map.setView([ipInfo.value.lat, ipInfo.value.lng], 13);
+        leaflet.marker([ipInfo.value.latlng, ipInfo.value.latlng]).addTo(map);
+        map.setView([ipInfo.value.latlng, ipInfo.value.latlng], 13);
       } catch (e) {
-        alert(e.message);
+        // alert(e.message);
         console.log(e);
       }
     };
